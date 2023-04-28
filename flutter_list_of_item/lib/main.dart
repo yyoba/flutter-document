@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'NavBar.dart';
 void main() {
   runApp(Lists());
 }
@@ -11,10 +11,12 @@ class Lists extends StatelessWidget {
     return MaterialApp(
       title: 'My App',
       home: Scaffold(
+        drawer: NavBar(),
         appBar: AppBar(
           title: Text('\{ \} List of items'),
             actions: const <Widget>[
           Icon(Icons.more_vert),
+        ],
         ),
         // ignore: prefer_const_constructors
         body: ListView(          
@@ -37,7 +39,7 @@ class Lists extends StatelessWidget {
                      borderRadius: BorderRadius.circular(10)),
                      leading: Icon(Icons.phone_android_outlined,size: 50,color: Colors.black),
                      title: Text('SMART PHONE'),
-                     subtitle: Text('\1000.0'),
+                     subtitle: Text('\$1000.0'),
                      trailing: Icon(Icons.edit,color: Colors.black),
                   ),
                   ),
@@ -48,7 +50,7 @@ class Lists extends StatelessWidget {
                      borderRadius: BorderRadius.circular(10)), 
                      leading: Icon(Icons.cable,size: 50,color: Colors.black),
                      title: Text('CABLE'),
-                     subtitle: Text('\10.0'),
+                     subtitle: Text('\$10.0'),
                      trailing: Icon(Icons.edit,color: Colors.black),
                   ),
                   ),
